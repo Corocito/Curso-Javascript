@@ -73,64 +73,115 @@ let plataRober= prompt("Introduzca la cantidad de plata de Roberto");
 let plataPedro= prompt("Introduzca la cantidad de plata de Pedro");
 let plataCofla= prompt("Introduzca la cantidad de plata de Cofla");
 
+//SE COMBIERTEN LOS VALORES A NUMERO
+plataCofla=parseInt(plataCofla);
+plataRober=parseInt(plataRober);
+plataPedro=parseInt(plataPedro);
+
+
 //CONDICIONES DE COFLA
 if(plataCofla>=0.6 && plataCofla <1){
-    alert("Cofla puede comprar el helado de agua y la devuelta sería de 2.4 USD")
+    alert("Cofla puede comprar el helado de agua")
+    alert("y sobran "+ (plataCofla-0.6))
 }
 else if(plataCofla>=1 &&plataCofla<1.6){
-    alert("Cofla puede comprar el helado de crema y la devuelta sería de 2 USD")
+    alert("Cofla puede comprar el helado de crema")
+    alert("y sobran "+ (plataCofla-1))
 }
 else if(plataCofla>1.6 && plataCofla<1.7){
-    alert("Cofla puede comprar el helado marca heladix y la devuelta sería de 1.4 USD ")
+    alert("Cofla puede comprar el helado marca heladix")
+    alert("y sobran "+ (plataCofla-1.6))
 }
 else if(plataCofla>=1.7 && plataCofla<1.8){
-    alert("Cofla puede comprar el helado marca heladovich y la devuelta sería de 1.3 USD ")
+    alert("Cofla puede comprar el helado marca heladovich")
+    alert("y sobran "+ (plataCofla-1.7))
 }
 else if(plataCofla>=1.8 && plataCofla<2.9){
-    alert("Cofla puede comprar el helado marca helardo y la devuelta sería de 1.2 USD")
+    alert("Cofla puede comprar el helado marca helardo")
+    alert("y sobran "+ (plataCofla-1.8))
 }
 else if(plataCofla >= 2.9){
-    alert("Cofla puede comprar el helado con confites o el pote de 1/4 kg de helado y la devuelta sería de 0.1 USD")
+    alert("Cofla puede comprar el helado con confites o el pote de 1/4 kg de helado")
+    alert("y sobran "+ (plataCofla-2.9))
+}
+else{
+    alert("No alcanza para nada")
 }
 
 //CONDICIONES DE PEDRO
 if(plataPedro>=0.6 && plataPedro <1){
-    alert("Pedro puede comprar el helado de agua y la devuelta sería de 1.1 USD")
+    alert("Pedro puede comprar el helado de agua")
+    alert("y sobran "+ (plataPedro-0.6))
 }
 else if(plataPedro>=1 && plataPedro<1.6){
-    alert("Pedro puede comprar el helado de crema y la devuelta sería de 0.7 USD")
+    alert("Pedro puede comprar el helado de crema")
+    alert("y sobran "+ (plataPedro-1))
 }
 else if(plataPedro>1.6 && plataPedro<1.7){
-    alert("Pedro puede comprar el helado marca heladix y la devuelta sería de 0.1 USD ")
+    alert("Pedro puede comprar el helado marca heladix")
+    alert("y sobran "+ (plataPedro-1.6))
 }
 else if(plataPedro>=1.7 && plataPedro<1.8){
-    alert("Pedro puede comprar el helado marca heladovich y no tendria devuelta ")
+    alert("Pedro puede comprar el helado marca heladovich")
+    alert("y sobran "+ (plataPedro-1.7))
 }
 else if(plataPedro>=1.8 && plataPedro<2.9){
-    alert("Pedro puede comprar el helado marca helardo y la devuelta sería de 1.2 USD")
+    alert("Pedro puede comprar el helado marca helardo")
+    alert("y sobran "+ (plataPedro-1.8))
 }
 else if(plataPedro >= 2.9){
-    alert("Pedro puede comprar el helado con confites o el pote de 1/4 kg de helado y la devuelta sería de 0.1 USD")
+    alert("Pedro puede comprar el helado con confites o el pote de 1/4 kg de helado")
+    alert("y sobran "+ (plataPedro-2.9))
+}
+else{
+    alert("No alcanza para nada")
 }
 
 //CONDICIONES DE ROBERTO
 if(plataRober>=0.6 && plataRober <1){
-    alert("Roberto puede comprar el helado de agua y la devuelta sería de 0.9 USD")
+    alert("Roberto puede comprar el helado de agua")
+    alert("y sobran "+ (plataRober-0.6))
 }
 else if(plataRober>=1 && plataRober<1.6){
-    alert("Roberto puede comprar el helado de crema y la devuelta sería de 0.5 USD")
+    alert("Roberto puede comprar el helado de crema")
+    alert("y sobran "+ (plataRober-1))
 }
 else if(plataRober>1.6 && plataRober<1.7){
-    alert("Roberto puede comprar el helado marca heladix y la devuelta sería de 0.1 USD ")
+    alert("Roberto puede comprar el helado marca heladix")
+    alert("y sobran "+ (plataRober-1.6))
 }
 else if(plataRober>=1.7 && plataRober<1.8){
-    alert("Roberto puede comprar el helado marca heladovich y no tendria devuelta ")
+    alert("Roberto puede comprar el helado marca heladovich")
+    alert("y sobran "+ (plataRober-1.7))
 }
 else if(plataRober>=1.8 && plataRober<2.9){
-    alert("Roberto puede comprar el helado marca helardo y la devuelta sería de 1.2 USD")
+    alert("Roberto puede comprar el helado marca helardo")
+    alert("y sobran "+ (plataRober-1.8))
 }
 else if(plataRober >= 2.9){
-    alert("Roberto puede comprar el helado con confites o el pote de 1/4 kg de helado y la devuelta sería de 0.1 USD")
+    alert("Roberto puede comprar el helado con confites o el pote de 1/4 kg de helado")
+    alert("y sobran "+ (plataRober-2.9))
+}
+else{
+    alert("No alcanza para nada")
 }
 
+//SE PRESENTA A CONTINUACION UNA MANERA MAS CORTA DE RESOLVER EL PROBLEMA
 
+"use strict";//SE DEFINE UNA CONSTANTE
+const plataCompra = (n)=>{
+    let pla = prompt(`Plata de ${n}`);
+    if(pla >= 0.6 && pla <1) return (`${n}: helado de agua`)
+    if(pla >= 1 && pla <1.6) return (`${n}: helado de crema`)
+    if(pla >= 1.6 && pla <1.7) return (`${n}: helado de heladix`)
+    if(pla >= 1.7 && pla <1.8) return (`${n}: helado de heladovich`)
+    if(pla >= 1.8 && pla <2.9) return (`${n}: helado de helardo`)
+    if(pla >= 0.6)return(`${n}: helado de confites o pote de 1/4 kg`)
+    else return (`${n}: No alcanza para ningun helado`)
+}
+
+console.log(plataCompra("Cofla"));
+console.log(plataCompra("Pedro"));
+console.log(plataCompra("Roberto"));
+
+//ESTA SERIA LA MANERA MAS FACIL DE SOLUCIONAR EL PROBLEMA DE COFLA
