@@ -167,8 +167,9 @@ else{
 }
 
 //SE PRESENTA A CONTINUACION UNA MANERA MAS CORTA DE RESOLVER EL PROBLEMA
-
-"use strict";//SE DEFINE UNA CONSTANTE
+//ESTA SERIA LA MANERA MAS FACIL DE SOLUCIONAR EL PROBLEMA DE COFLA
+"use strict";
+//SE DEFINE UNA CONSTANTE
 const plataCompra = (n)=>{
     let pla = prompt(`Plata de ${n}`);
     if(pla >= 0.6 && pla <1) return (`${n}: helado de agua`)
@@ -184,4 +185,89 @@ console.log(plataCompra("Cofla"));
 console.log(plataCompra("Pedro"));
 console.log(plataCompra("Roberto"));
 
-//ESTA SERIA LA MANERA MAS FACIL DE SOLUCIONAR EL PROBLEMA DE COFLA
+//SE INICIA CON LA EXPLICACION DE LOS ARRAY
+//LOS ARRAY SE DEFINEN CON LOS []
+//ES MEJOR DEFINIR LAS VARIABLES CON let
+let gallinas = ["Grande", "Alas", "Cafesota"]
+
+//PARA MOSTRAR UNA VARIABLE ESPECIFICA SE DEBE DE BUSCAR POR EL INDICE
+document.write(gallinas[0]);
+
+//UN EJEMPLO DE ESTE BUCLE ES UNO QUE SUMA LOS NUMEROS HASTA ALCANZAR UNA CONDICION Y LOS IMPRIME
+let num=0;
+while(num <10){
+    num++;
+    document.write(num);
+    if(num==10){
+        break;
+    }
+}
+
+
+//LA VARIANTE DEL WHILE ES EL DO WHILE QUE EJECUTA Y LUEGO PREGUNTA
+do{
+    num++;
+    document.write(num+"<br>")
+}
+while(num <=6 )
+
+//EL CICLO FOR FUNCIONA PARA CUANDO SE ASBE LA CONTIDAD DE VECES QUE SE DEBE DE REPETIR UNA ACCION
+//ES UN EJEMPLO DE FOR
+for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    
+}
+//SE ENCARGA DE MOSTRAR LA VARIABLE SUMANDOLA HASTA QUE ALCANCE EL VALOR DE LA CONDICIÓN
+for(let i=0; i<6; i++){
+    if(i==12){
+        continue; //EL VALOR CONTINUE SIRVE PARA SALTAR LOS VALORES, EN ESTE CASO NO SE MOSTRARIA EL 12
+    }
+    
+    document.write(i)
+}
+ 
+let numerosLista=[1,2,3,4,5,6,7,8,9,0];
+
+for(n in numerosLista){ //EL FOR IN MUSTRA LOS INDICES DE LAS LISTAS
+    document.write(n[numerosLista]);
+}
+
+for(n of numerosLista){//EL FOR OF MUESTRA LOS VALORES DE LAS LISTAS
+    document.write(n);
+}
+
+
+//MUESTRA LOS VALORES DE AMBOS ARRAYS
+let array1=["Grande", "Alas", "Cafe"];
+let array2=["Blanca", "Mona", array1];
+for(let array in array2){
+    if(array ==2){
+        for (let array of array1){
+            document.write(array);
+        }
+    }
+    else{
+        document.write(array2[array]);
+    }
+}
+
+//MUESTRA SI HAY VALORES IGUALES EN AMBOS ARRAY
+function juntarArrays(arr1, arr2){
+
+ arr1= [2,3,4,1,6,8,5];
+ arr2= [0,4,7,9];
+var c= []
+for ( let i = 0; i<arr1.length; i++){
+    for(let i =0; i< arr2.length; i++){
+        if(arr2[i] === arr1[i]){
+            c.push(arr2[i]);
+        }
+    }
+}
+return c;
+}
+
+
+
+
+
