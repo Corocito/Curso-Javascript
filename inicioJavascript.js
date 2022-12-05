@@ -251,23 +251,57 @@ for(let array in array2){
     }
 }
 
+
+
+//LOS LABEL SIRVEN PARA PODER DEFINIR LAS VARIABLES, TANTO COMO LOS FOR O LOS IF
+
+/*
+SE EMPIEZA CON LA EXPLICACION DE LAS FUNCIONES
+*/
+//LAS FUNCIONES SIRVEN PARA PODER REUTILIZAR CODIGO Y SE LLAMAN CON EL NOMBRE FUNCTION
+
+function saludar(){
+    let respuesta= prompt("Hola buenas tardes");
+    if(respuesta== "bien"){
+        alert("bacano")
+    }
+    else{
+        alert("no me importa")
+    }
+}
+
 //MUESTRA SI HAY VALORES IGUALES EN AMBOS ARRAY
 function juntarArrays(arr1, arr2){
 
- arr1= [2,3,4,1,6,8,5];
- arr2= [0,4,7,9];
-var c= []
-for ( let i = 0; i<arr1.length; i++){
-    for(let i =0; i< arr2.length; i++){
-        if(arr2[i] === arr1[i]){
-            c.push(arr2[i]);
-        }
+    arr1= [2,3,4,1,6,8,5];
+    arr2= [0,4,7,9];
+   var c= []
+   for ( let i = 0; i<arr1.length; i++){
+       for(let i =0; i< arr2.length; i++){
+           if(arr2[i] === arr1[i]){
+               c.push(arr2[i]);
+           }
+       }
+   }
+   return c;
+   }
+//EL RETURN FUNCIONA PARA PODER DEVOLVER UN VALOR DE LA FUNCIÓN, ADEMAS DE FINALIZAR LA FUNCION
+//LOS PARAMETROS SON LOS VALORES QUE SE DEFINEN EN LA FUNCION PARA SU FUNCIONAMIENTO
+
+
+//OTRA MANERA DE DEFINIR LAS FUNCIONES ES CON LAS FUNCIONES FLECHA
+//FUNCIONAN DE LA MISMA MANERA
+const saludo=(nombre)=>{
+    let respuesta= prompt("Hola buenas tardes");
+    if(respuesta== "bien"){
+        alert("bacano")
+    }
+    else{
+        alert("no me importa")
     }
 }
-return c;
-}
+//LAS FUNCIONES FLECHA PUEDEN FACILITAR UN CODIGO SI EL CONTENIDO DE LA FUNCION ES POCO
 
-
-
+const salu= nombre=> document.write(frase)
 
 
