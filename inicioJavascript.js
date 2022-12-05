@@ -305,3 +305,64 @@ const saludo=(nombre)=>{
 const salu= nombre=> document.write(frase)
 
 
+/*
+SE INICIA LA SOLUCIÓN DE LOS PROBLEMAS DE COFLA #2
+*/ 
+
+let entrada =false;
+
+const validarEntrada = (tiempo)=>{
+    let edad = prompt("¿Cual es tu edad?");
+    if(edad >18){
+        if(tiempo >=2 && tiempo <7 && entrada==false){
+            alert("Puedes pasar gratis");
+            entrada=true;
+        }
+        else{
+            alert(`Son las ${tiempo} horas y puedes pasar, pero debes de pagar la entrada`);
+        }
+    }
+    else{
+        alert("No tienes la edad suficiente para poder ingresar");
+    }
+}
+
+//SEGUNDO PROBLEMA DE COFLA
+
+let cantidad = prompt("¿Cuantos alumnos son?");
+let arrayAlumnos=[];
+
+for(i =0; i<cantidad ; i++){
+    arrayAlumnos[i]= [prompt("Nombre del alumno: "+ (i+1)), 0];
+}
+
+const asistencia = (nombre)=>{
+    let presente = prompt("Nombre");
+    if(presente=="p"|| presente== "P"){ //LAS || SIGNIFICAN EL CONDICIONAL "O"
+        arrayAlumnos[i][1]++; //DE ESTA MANERA SE ESTARIA SELECCIONANDO LOS ELEMENTOS DE DOS ARRAYS
+
+    }
+}
+
+for (i = 0; i<30; i++){
+    for(alumno in arrayAlumnos){
+        asistencia(arrayAlumnos[alumno][0], alumno);
+    }
+}
+
+for(alumno in arrayAlumnos){
+    let resul = `${arrayAlumnos[alumno][0]}:<br>
+    ___________Presentes: <br> ${arrayAlumnos[alumno][1]}</br> <br>
+    ___________Ausentes:  <br> ${30-arrayAlumnos[alumno][1]} </br>`;
+    if(30-arrayAlumnos[alumno][1]>18){
+        resul+= "REPROBADO POR INASISTENCIAS";
+    }
+    else{
+        resul+="APROBADO"
+    }
+    document.write(resul);
+}
+
+
+
+
