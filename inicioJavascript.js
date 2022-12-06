@@ -363,6 +363,54 @@ for(alumno in arrayAlumnos){
     document.write(resul);
 }
 
+//SE CREA UN PROGRAMA PARA REALIZAR OPERACIONES MATEMATICAS
 
+//Se define cada una de las operaciones que se van a usar
+const sumar =(n1,n2)=>{
+    return parseInt(n1)+ parseInt(n2);
+}
 
+const restar=(n1,n2)=>{
+    return parseInt(n1) - parseInt(n2);
+}
 
+const multi=(n1,n2)=>{
+    return parseInt(n1)*parseInt(n2);
+}
+
+const div=(n1,n2)=>{
+    return parseInt(n1)/parseInt(n2);
+}
+
+//Se le pregunta al usuario que operacion desea realizar
+alert("¿Que operacion deseas realizar?");
+let oper= prompt("1:Suma, 2:Resta, 3:Multiplicación, 4:División");
+
+//Se realizan las operaciones if para cada caso de operaciones
+if(oper=="1"){
+    let num1= prompt("Ingrese el primer número: ");
+    let num2= prompt("Ingrese el segundo número: ");
+    resultado= sumar(num1,num2);
+    alert(`El resultado de la suma es ${resultado}`);
+}
+else if(oper=="2"){
+    let num1= prompt("Ingrese el primer número: ");
+    let num2= prompt("Ingrese el segundo número: ");
+    resultado= restar(num1, num2);
+    alert(`El resultado de la resta es ${resultado}`);
+}
+else if(oper=="3"){
+    let num1= prompt("Ingrese el primer número: ");
+    let num2= prompt("Ingrese el segundo número: ");
+    resultado= multi(num1, num2);
+    alert(`El resultado de la multiplicación es ${resultado}`);
+}
+else if(oper=="4"){
+    let num1= prompt("Ingrese el primer número: ");
+    let num2= prompt("Ingrese el segundo número: ");
+    resultado=div(num1,num2);
+    alert(`El resultado de la división es ${resultado}`);
+}
+else{
+    alert("El número seleccionado no esta disponible");
+}
