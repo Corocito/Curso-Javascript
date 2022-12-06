@@ -226,7 +226,99 @@ document.write(`${celular4.mobileGamaAlCaract()}<br> <br>
 ${celular5.mobileGamaAlCaract()}<br>`)
 
 
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
 
+class app{
+    //SE CREAN LAS CARACTERISTICAS DE LA CLASE
+    constructor(nombreApp, cantiDescargas, puntuApp, pesoApp){
+        this.nombreApp=nombreApp;
+        this.cantiDescargas=cantiDescargas;
+        this.puntuApp=puntuApp;
+        this.pesoApp=pesoApp;
+        this.instalar= false;
+        this.appAbierta=false;
+    }
+    //SE CREAN LOS METODOS DE LA CLASE  
+    instApp(){
+        if(this.instalar==false){
+            this.instalar=true;
+            alert(`Se ha instalado la App: ${this.nombreApp}`);
+            
+        }
+        else{
+            this.instalar=true;
+            alert(`La aplicación ${this.nombreApp} ya está instalada`);
+            
+        }
+    }
+
+    desinstApp(){
+        if(this.instalar==true){
+            this.instalar=false;
+            alert(`Se ha desinstalado la App: ${this.nombreApp}`);
+            
+        }
+        else{
+            this.instalar=false;
+            alert(`No se encuentra la aplicación ${this.nombreApp}`);
+            
+        }
+    }
+
+    abrirApp(){
+        if(this.instalar==true){
+            this.abrirApp=true;
+            alert(`La aplicación ${this.nombreApp} se ha abierto`);
+            
+        }
+        else{
+            alert("No se puede abrir la aplicación");
+        }
+    }
+
+    cerrarApp(){
+        if(this.abrirApp==true){
+            this.abrirApp==false;
+            alert(`Se ha cerrado la aplicación ${this.nombreApp}`);           
+        }
+        else{
+            alert("La aplicación no se puede cerrar")
+        }
+    }
+
+    descripApp(){
+        return `Nombre de la App: <br> ${this.nombreApp}</br></br>
+        Cantidad de Descargas: <br> ${this.cantiDescargas}</br></br>
+        Puntuación de la App: <br> ${this.puntuApp}</br></br>
+        Peso de la App: <br> ${this.pesoApp}</br></br>`
+    }
+}
+
+
+const app1= new app("Angry birds", "1 Millón de Descargas", " 5 Estrellas", "100 mb");
+const app2= new app("Minecraft", "1 Millón de Descargas", "4 Estrellas", "500 mb");
+const app3= new app("Tik Tok", "10 Millones de Descargas", "4.5 Estrellas","1 Gb");
+const app4= new app("Free Fire", "3 Millones de Descargas", "4.3 Estrellas", "500 Mb");
+const app5= new app("Monster Hunter World Iceborne", "100 Millones de Descargas", "5 Estrellas", "50 Gb");
+const app6= new app("Soul Knight", "2 Millones de Descargas", "4 Estrellas", "250 Mb");
+const app7= new app("Doom Eternal", "100 Millones de Descargas", "5 Estrellas", "90 Gb");
+
+//SE PASA CON LAS APLICACIONES QUE SE ELIGIERON
+
+app5.instApp();
+document.write(`${app5.descripApp()}</br>`)
+app5.abrirApp();
+app5.cerrarApp();
+app5.desinstApp();
+
+//APLICACIÓN #2
+
+app7.instApp();
+document.write(`${app7.descripApp()}</br>`)
+app7.abrirApp();
+app7.cerrarApp();
+app7.descripApp();
 
 
 
