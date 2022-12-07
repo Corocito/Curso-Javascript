@@ -69,3 +69,98 @@ let resulsubString= cadena3.substring(0,2);
 //TRIMEND: ELIMINA LOS ESPACIOS EN BLANCO AL FINAL DE LA CADENA
 //TRIMSTART: ELIMINA LOS ESPACIOS EN BLANCO AL INICIO DE LA CADENA
 //VALUE: RETORNA EL VALOR PRIMITIVO DE UN OBJETO STRING
+
+
+
+
+
+//-------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------
+//SE INICIA CON LA EXPLICACIÓN DE LOS METODOS DE LOS ARRAY
+
+let gallinas=["Grande", "Alas", "Cafesota", "Pardo"];
+
+//------METODOS TRANSFORMADORES
+//------------
+
+
+//POP(): SE ENCARGA DE ELIMINAR EL ULTIMO ELEMENTO DEL ARRAY Y LO MUESTRA
+let resultadoPop = gallinas.pop();
+document.write(resultadoPop + "<br>");
+//en este caso se borraria el elemento pardo y se mostraria en el documen.write
+//SHIFT(): ELIMINA EL PRIMER ELEMENTO DEL ARRAY Y LO MUESTRA
+
+
+//PUSH(): AFREGA UN ELEMENTO AL ARRAY AL FINAL DE LA LISTA
+//Y MUESTRA EL LA CANTIDAD DE ELEMENTOS QUE HAY EN EL ARRAY
+let resultadoPush= gallinas.push("Blanca");
+
+
+//REVERSE(): INVIERTE EL ORDEN DE LOS ELEMENTOS DEL ARRAY
+
+let resultadorReverse = gallinas.reverse();
+
+
+//UNSHIFT(): AGREGA UNO O MAS ELEMENTOS AL INICIO DEL ARRAY Y DEVUELVE LA NUEVA 
+//LONGITUD DEL ARRAY
+
+gallinas.unshift("Sarca");
+
+
+//SORT(): ORDENA LOS ELEMENTOS DEL ARRAY LOCALMENTE Y DEVUELVE EL ARRAY ORDENADO
+//ORGANIZARIA LOS NUMEROS DE MENOR A MAYOR
+let numeros=[2,5,1,8,9,23,1];
+numeros.sort();
+
+
+//SPLICE(): CAMBIA EL CONTENIDO DE UN ARRAY ELIMINANDO ELEMENTOS EXISTENTES Y/O
+//AGREGANDO NUEVOS ELEMENTOS
+
+//EN ESTE CASO BORRARIA LOS ELEMENTOS ENTRE EL INDICE 1 AL 2 (SE BORRARIAN LOS ELEMENTOS 5 Y 1 DEL ARRAY)
+//Y AGREGARIA EL VALOR 9999
+numeros.splice(1,2,9999);
+
+//SI SOLO SE DESEA AGREGAR VALORES, EN EL PRIMER NUMERO SE INDICA DONDE SE DESEA AGREGAR Y DESPUES SE PONE UN 0
+//Y SE DICEN CUALES ELEMENTOS AGREGAR
+
+numeros.splice(-1,0,8981923898) //EL -1 ES PARA AGREGARLOS AL FINAL DEL ARRAY
+
+//-----METODOS ACCESORES
+
+
+//JOIN(): UNE TODOS LOS ELEMENTOS DE UNA MATRIZ Y LOS CONVIERTE EN UN STRING
+
+let resultadoJoin = numeros.join(" --- "); //ENTRE CADA VALOR MOSTRARIA EL ---
+
+
+// SLICE(): DEVUELVE UNA PARTE DEL ARRAY DESDE EL INICIO HASTA EL FIN
+
+//funciona para mostrar secciones de array basandose en los indices del array
+
+//usando el -1 se mostrarian todos los elementos del array
+let resultadoSlice = numeros.slice(0,-1);
+
+
+//-------METODOS DE REPETICIÓN
+
+//FILTER(): CREA UN NUEVO ARRAY CON TODOS LOS ELEMENTOS QUE CUMPLAN UNA CONDICION
+
+//se pueden crear arrays nuevos con los elementos que cumplan con la condicion
+//del filter
+let resultadoFilter= numeros.filter(n =>document.write(numeros+ "<br>"));
+
+
+
+//FOREACH(): EJECUTA UNA FUNCION UNA VEZ POR CADA ELEMENTO
+
+//funciona parecido al filter solo que no es tan completo
+let resultadoForEach= gallinas.forEach(n=>gallinas.length >2);
+
+document.write(resultadoForEach);
+
+
+
+//-------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------
+
