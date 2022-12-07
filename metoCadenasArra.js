@@ -159,8 +159,60 @@ let resultadoForEach= gallinas.forEach(n=>gallinas.length >2);
 
 document.write(resultadoForEach);
 
-
-
 //-------------------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------
 
+//SE INICIA CON LA EXPLICACIÓN DEL OBJETO MATH
+
+
+ //----------METODOS-------------//
+ 
+ //SQRT(): DEVUELVE LA RAIZ CUADRADA POSITIVA DE UN NUMERO
+
+ let n=Math.sqrt(25); //devuelve la raiz cuadrada de 25
+
+ //CBRT(): DEVUELVE LA RAIZ CÚBICA DE UN NUMERO
+
+ let n2=Math.cbrt(27); //devuelve la raiz cubica de 27
+
+ //MAX(): DEVUELVE EL MAYOR DE CERO O MAS NUMEROS
+
+ let n3= Math.max(1,2,3,4,1,2,5,6,4,5,7,4,2333,23,999999999999);
+
+ //MIN(): DEVUELVE EL MENOR DE CERO O MAS NUMEROS
+
+ let n4=Math.min(92931,9,9318,0.1,1);
+
+ //RANDOM(): DEVUELVE UN NUMERO PSEUDO-ALEATORIO ENTRE 0 Y 1
+
+ let nRandom= Math.random();
+
+ //ROUND(): DEVUELVE EL VALOR DE UN NUMERO REDONDEADO AL NUMERO ENTERO MAS CERCANO
+
+ let nRandom2= Math.random()*100; // de esta manera se devuelve un numero aleatorio entre 0 y 100
+ let nRound = Math.round(nRandom2);
+
+ //FROUND(): DEVUELVE LA REPRESENTACION FLOTANTE DE PRECISION SIMPLE MAS CERCANO
+let nfround= Math.fround(99.99999999999999999999999999);
+//en este caso mostraria un 100
+ 
+//FLOOR(): DEVUELVE EL MAYOR ENTERO MENOR O IGUAL A UN NÚMERO
+//siempre redondea para el numero menor
+
+let nFloor= Math.floor(nRandom2)
+
+//TRUNC(): DEVUELVE LA PARTE ENTERA DEL NUMERO X, LA ELIMINACION DE LOS DIGITOS FRACCIONARIOS
+//funciona parecido al round solo que no redondea, solo elimina las fracciones
+
+
+//-------------------PROPIEDADES-----------------------//
+
+//PI - RADIO DE LA CIRCUNFERENCIA
+// SQRT1_2: RAIZ CUADRADA DE 1/2
+//SQRT2: RAIZ CUADRADA DE 2
+//E: CONSTANTE DE EULER
+//LN2: LOGARITMO NATURAL DE 2
+//LN10: LOGARITMO NATURAL DE 1O
+//LOG2E: LOGARITMO DE E CON BASE 2
+//LOG10E: LOGARITMO DE E CON BASE 10
