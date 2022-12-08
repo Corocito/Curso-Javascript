@@ -92,7 +92,7 @@ document.write(resultadoPop + "<br>");
 //SHIFT(): ELIMINA EL PRIMER ELEMENTO DEL ARRAY Y LO MUESTRA
 
 
-//PUSH(): AFREGA UN ELEMENTO AL ARRAY AL FINAL DE LA LISTA
+//PUSH(): AGREGA UN ELEMENTO AL ARRAY AL FINAL DE LA LISTA
 //Y MUESTRA EL LA CANTIDAD DE ELEMENTOS QUE HAY EN EL ARRAY
 let resultadoPush= gallinas.push("Blanca");
 
@@ -216,3 +216,163 @@ let nFloor= Math.floor(nRandom2)
 //LN10: LOGARITMO NATURAL DE 1O
 //LOG2E: LOGARITMO DE E CON BASE 2
 //LOG10E: LOGARITMO DE E CON BASE 10
+
+
+//-------------------------------------------------------------------------------------------------
+
+//SE CREA LA CLASE CALCULADORA PARA PODER MANEJAR LAS OPERACIONES
+class calculadora{
+    constructor(){
+    }
+//Se define cada una de las operaciones que se van a usar
+    sumar(n1,n2){
+        return parseInt(n1)+ parseInt(n2);
+    }
+    restar(n1,n2){
+        return parseInt(n1) - parseInt(n2);
+    }
+    multi(n1,n2){
+        return parseInt(n1)*parseInt(n2);
+    }
+    div(n1,n2){
+        return parseInt(n1)/parseInt(n2);    
+    }
+
+    potenciar(n1, exp){
+        return n1**exp; //de esta manera se realizan las potencias
+    }
+
+    raizCuadrada(n1){
+        const result= Math.sqrt(n1);
+        return result;
+    }
+
+    raizCubica(n1){
+        const result= Math.cbrt(n1);
+        return result;
+    }
+}
+
+
+//Se instancia la clase calculadora creando el objeto
+const calcu= new calculadora();
+
+//Se le pregunta al usuario que operacion desea realizar
+
+alert("¿Que operacion deseas realizar?");
+oper= prompt("1:Suma, 2:Resta, 3:Multiplicación, 4:División, 5:Potenciación, 6:Raiz Cuadrada, 7:Raiz Cubica");
+
+//Se realizan las operaciones if para cada caso de operaciones
+if(oper=="1"){
+    let num1= prompt("Ingrese el primer número: ");
+    let num2= prompt("Ingrese el segundo número: ");
+    resultado= calcu.sumar(num1,num2);
+    alert(`El resultado de la suma es ${resultado}`);
+}
+else if(oper=="2"){
+    let num1= prompt("Ingrese el primer número: ");
+    let num2= prompt("Ingrese el segundo número: ");
+    resultado= caclu.restar(num1, num2);
+    alert(`El resultado de la resta es ${resultado}`);
+}
+else if(oper=="3"){
+    let num1= prompt("Ingrese el primer número: ");
+    let num2= prompt("Ingrese el segundo número: ");
+    resultado= calcu.multi(num1, num2);
+    alert(`El resultado de la multiplicación es ${resultado}`);
+}
+else if(oper=="4"){
+    let num1= prompt("Ingrese el primer número: ");
+    let num2= prompt("Ingrese el segundo número: ");
+    resultado=calcu.div(num1,num2);
+    alert(`El resultado de la división es ${resultado}`);
+}
+//SE AGREGAN LAS NUEVAS OPERACIONES
+else if(oper=="5"){
+    let num1= prompt("Ingrese el primer número: ");
+    let num2= prompt("Ingrese el exponente: ");
+    resultado=calcu.potenciar(num1,num2);
+    alert(`El resultado de la potenciación es ${resultado}`);
+}
+else if(oper=="6"){
+    let num1= prompt("Ingrese el número para su raiz: ");   
+    resultado=calcu.raizCuadrada(num1);
+    alert(`El resultado de la radicación es ${resultado}`);
+}
+else if(oper=="7"){
+    let num1= prompt("Ingrese el número para su raiz cubica: ");
+    resultado=calcu.raizCubica(num1);
+    alert(`El resultado de la radicación es ${resultado}`);
+}
+else{
+    alert("El número seleccionado no esta disponible");
+}
+
+
+//-------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------
+
+//-------------------------------------------------------------------------------------------------
+
+/*SE SOLUCIONA PROBLEMA DE COFLA DE INSCRIBIR ALUMNOS A LOS DISTINTOS CURSOS*/
+
+let materias={
+    fisica:["Yo","Grande", "Alas" ,"Blanca"],
+    programacion:["Yo","Grande", "Alas", "Cafesota", "Blanca"],
+    calculo:["Yo","Grande", "Cafesota", "Blanca"],
+    quimica:["Yo","Grande", "Alas", "Cafesota",]
+}
+
+
+//se crea la funcion para inscribir alumnos
+const inscribir= (alumno, materia)=>{
+    persona= materias[materia];
+    persona.shift();
+    alummos = persona;
+    
+    if(alumno.lenght >=20){
+        document.write(`Lo siento ${alumno}, las clases de ${materia} ya estan llenas`);
+    }
+    else{
+        alummos.push(alumno);
+        if(materia=="fisica"){
+            materias={
+                fisica:alummos,
+                programacion:materias['programacion'],
+                logica:materias['logica'],
+                quimica:materias['quimica']
+            }
+        }
+        else if(materia=="programacion"){
+            materias={
+                fisica:materias['fisica'],
+                programacion:alumnos,
+                logica:materias['logica'],
+                quimica:materias['quimica']
+            }
+        }
+        else if(materia=="logica"){
+            materias={
+                fisica:materias['fisica'],
+                programacion:materias['programacion'],
+                logica:alumnos,
+                quimica:materias['quimica']
+            }
+        }
+        else if(materia=="quimica"){
+            materias={
+                fisica:materias['fisica'],
+                programacion:materias['programacion'],
+                logica:materias['logica'],
+                quimica:alumnos
+            }
+        }
+        document.write(`Felicidades ${alumno} te has inscribido al curso de ${materia}`);
+    }
+}
+
+document.write(materias['fisica'] + "<br>");
+inscribir("pardo", "fisica");
+document.write(materias['fisica']+ "<br>" );
+
+
