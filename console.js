@@ -132,6 +132,19 @@ document.querySelector(".parrafo")
 //title: Contiene un texto con informacion relacionada al elemento al que pertenece
 
 
+/*--------- ATRIBUTOS DE INPUTS */
+
+//Se puede trabajar con ellos directamente con el objeto
+
+//classname
+//value
+//type
+//accept: Trabaja con el file, para poder decidir que tipos de archivos acepta recibir
+//form
+//minlenght: La minima cantidad de caracteres con las que trabaja un input
+//placeholder: Deja un texto definido en los inputs
+//required: Define un campo como requerido para enviar los formularios
+
 
 
 
