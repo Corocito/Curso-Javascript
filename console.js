@@ -60,3 +60,78 @@ console.log("Lasa gallinas son hermosas");
 
 //timeLog(): Muestra la cantidad de tiempo desde el inicio del contador
 
+//-------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------
+
+//SE INICIA CON LA EXPLICACIÓN DEL DOM (Document Object Model)
+
+
+
+//Nodo: En el DOM es el nodo raiz, a partir del cual se derivan el resto de nodos
+
+//Element: Nodos definidos por etiquedas html
+
+//Text: El texto dentro de un nodo element se considera un nuevo nodo hijo del tipo text 
+
+//Attribute: Los atributos de las etiquetas definen nodos ( En javascript no se ven como nodos, sino como informacion asociada al nodo de tipo element)
+
+//Comentarios y otros: Los comentarios y otros elementos como las declaraciones doctype en cabecera de los documentos html generan nodos
+
+
+
+
+/*Document: Metodos de Selección de Elementos*/
+
+//getElementById(): Selecciona un elemento por ID
+
+//getElementsByTagName: Selecciona todos los elementos que coincidan con el nombre
+//de la etiqueta especificada
+
+
+
+
+//querySelector(): Devuelve el primer elemento que coincida con el grupo especificado de selectores
+
+document.querySelector(".parrafo")
+
+//Se seleccionan todos los elementos que coincidan con .parrafo
+
+
+//querySelectorAll(): Devuelve todos los elementos que coincidan
+//con el grupo especificado de selectores
+
+
+
+/*Document:  Metodos para definir, obtener y eliminar valores de atributos*/
+
+//setAttribute(): Modifica el valor de un atributo
+
+//getAttribute(): Obtiene el valor de un atributo
+
+//removeAttribute(): Remueve el valor de un atributo
+
+
+
+
+/*------------------------------------Atributos Globales*/
+
+//class: Lista de clases de elementos separadas por espacios
+
+//contenteditable: Indica si el elemento puede ser modificable por el usuario (bool)
+
+//dir: Indica la direccionalidad del texto
+
+//hidden: Indica si el elemento aun no es, o ya no es relevante
+
+//id: Define un identificador unico
+
+//style: Contiene declaraciones de estilo CSS para ser aplicadas al elemento
+
+//tabindex: indica si el elemento puede obtener un focus o input
+
+//title: Contiene un texto con informacion relacionada al elemento al que pertenece
+
+
+
+
+
