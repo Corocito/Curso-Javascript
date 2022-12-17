@@ -69,5 +69,38 @@ console.log(screen);
     //devuelve la localizacion completa de la pagina web
     //-window.location.hostname  (devuelve en nombre de dominio del servidor web)
     //-window.location.pathname  (devuelve la ruta y el nombre del archivo de la pagina actual)
+    //-window.location.protocol  (devielce el protocolo web utilizado http o htpps)
+    //-window.location.assign()  (carga un nuevo documento)
+
+//SE CREA PARA PODER CONOCER EL TAMAÑO DE LA ALTURA DE LA PANTALLA DEL DISPOSITIVO
+let alto = window.screen.availHeight;
+//SE CREA PARA PODER CONOCER EL TAMAÑO DEL ANCHO DE LA PANTALLA
+let ancho = window.screen.availWidth;
+
+//SE CREA EL BOTON DE CONFIRM QUE APARECE COMO UN PROMPT
+comprar = confirm(`El alto es: ${alto}, el Ancho es: ${ancho}`);
+
+//SE LE DA LA CONDICION AL MENSAJE EN CASO DE APRETAR CONFIRMAR O CANCELAR
+if(comprar){
+    alert("Compra realizada exitosamente");
+} 
+else{
+    alert("Compra cancelada");
+}
+
+let hrefe = window.location.href;
 
 
+
+//-----------------------------------------------------------
+let href = window.location.href;
+let pathname = window.location.pathname;
+let hostname = window.location.hostname;
+let protocol = window.location.protocol;
+
+let html = `Protocolo: <b>${protocol}</b></b><br>`;
+html += `hostname: <b>${hostname}</b></b><br>`;
+html += `Pathname <b>${pathname}</b></b><br>`;
+html += `URL Completa: <b>${href}</b></b><br>`;
+
+document.write(html);
