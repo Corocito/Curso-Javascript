@@ -104,3 +104,11 @@ html += `Pathname <b>${pathname}</b></b><br>`;
 html += `URL Completa: <b>${href}</b></b><br>`;
 
 document.write(html);
+
+
+
+
+
+
+
+
