@@ -126,9 +126,35 @@ addEventListener("keyup", (e)=>{
 
 //-------------------------EXPLICACIÓN DE LOS TIMERS--------------//
 
+//ES UN TEMPORIZADOR, RECIBE COMO PRIMER PARAMETRO UNA FUNCION, Y DESPUES EL
+//TIEMPO DONDE SE VA A EJECUTAR, SIEMPRE EN MILISEGUNDOS
+const temporizador= setTimeout(()=>{
+    document.write("hola")
+},
+2000);
+
+//para hacer que el temporizador no se ejecute se usa el
+clearTimeout(temporizador);
+
+
+//LOS INTERVALOS FUNCIONAN COMO FUNCIONES QUE SE REPITEN PASADA UNA CANTIDAD DE TIEMPO DETERMINADA
+//NUNCA VAN A TERMINAR A MENOS QUE SE LE PIDA AL PROGRAMA
+const intervalo= setInterval(()=>{
+    document.write("hola")
+},
+2000);
+
+//de esta manera se eliminan los intervalos
+clearInterval(intervalo);
 
 
 
+//DE ESTA MANERA SE CREA UNA FUNCION QUE ESCRIBIRÁ EL TEXTP CADA 0.2 SEGUNDOS
+const intervalo2= setInterval(() => {
+    document.write("Vivan las gallinas");
+}, 200);
 
-
-
+//Y LA FUNCION PARA PODER FINALIZAR EL INTERVALO AL LLEGAR A LOS 10 SEGUNDOS
+setTimeout(() => {
+    clearInterval(intervalo2)
+}, 10000);
