@@ -1,0 +1,51 @@
+/*Se le da estilo al primer problema de Cofla*/
+body{
+    color: #333;
+    font-family: sans-serif;
+}
+
+input{
+   display: block;
+   width: 90%;
+   padding: 9px;
+   margin: 12px auto; 
+   box-sizing: border-box;
+   border: none;
+   border-top: 2px solid #666;
+   background: transparent;
+   transition: background 0.3s;
+   outline: none !important;
+}
+
+input:hover{
+    background: #26a;
+}
+
+input::placeholder{
+    color: #fff;
+}
+
+input[type="submit"]{
+    width: 50%;
+    margin-top: 18px;
+    padding: 12px;
+    background: #26a;
+    color: #fff;
+}
+
+input[type="submit"]:hover{
+    background: #048;
+}
+
+
+
+form{
+    width: 86%;
+    margin: auto;
+    background: #000;
+    padding: 30px;
+}
+
+h1{
+    color: #fff;
+}
