@@ -5,12 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cofla 8</title>
-    <script src="cofla8.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Problema de Cofla 8</h1>
+    
     <!--Se empieza con el problema #8 de Cofla-->
-
-
+    <form autocomplete="off">
+        <h1>Problema de Cofla 8</h1>
+        <input type="text" placeholder="Nombre Completo" id="nombre">
+        <input type="email" placeholder="Correo" id="correo">
+        <input type="text" placeholder="Materia" id="materia">
+        <input type="submit" value="Solicitar Mesa" id="btnEnviar">
+    </form>
+<!--Es mejor poner el archivo de javascript al final del HTML para que
+pueda funcionar cuando cargue todo el DOM-->
+<script src="cofla8.js"></script>
 </body>
 </html>
