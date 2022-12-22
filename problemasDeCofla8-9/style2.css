@@ -1,0 +1,27 @@
+body{  
+    font-family: sans-serif;
+}
+
+.gridContainer{
+    display: grid;
+    grid-template-rows: 50px;
+    grid-template-columns: repeat(4,minmax(min-content, max-content));
+    /*Con este comando las columnas extras que se creen van a tener tambien un 
+    template row como el inicial*/
+    grid-auto-rows: 50px;
+}
+
+.gridContainer .gridItem{
+    padding: 10px;
+    border: 1px solid rgb(17, 72, 154);
+    margin: 5px;
+}
+
+
+.btnConfirmar{
+    padding: 9px 40px;
+    color: #fff;
+    border: none;
+    background: #48e;
+    margin: 30px;
+}
