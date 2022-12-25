@@ -38,7 +38,11 @@ lenguaje de JavaScript, mientras que el DOMException y DOMError son excepsiones 
 //Para poder controlar las sentencias de codigo se usa el try y catch
 
 try{
-
+    throw{ //El throw funciona para lanzar errores
+        //El throw puede lanzar cualquier dato, incluso listas
+        error:"Nombre del Error",
+        info:"Información del Error"
+    } 
 }
 catch(error){ //EXISTEN DOS TIPOS DE CATCH, CONDICIONAL E INCONDICIONAL, EL CONDICIONAL ES EL CATCH QUE CONTIENE DENTRO DE SU BLOQUE UN CODIGO CON UNA CONDICION PARA CUMPLIR
     
@@ -46,3 +50,7 @@ catch(error){ //EXISTEN DOS TIPOS DE CATCH, CONDICIONAL E INCONDICIONAL, EL COND
     console.log(error) //Error es un objeto 
 }
 //Usando el try y el catch nos permite manejar los errores
+finally{//El finally siempre se retorna, sin importar la condicion
+    console.log("Este es el finally")
+}
+
