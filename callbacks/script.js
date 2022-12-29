@@ -59,6 +59,9 @@ const obtenerRaza = (raza,callback)=>{
 }
 
 //Se llena la funcion con la respectiva información necesaria para obtener los datos de las gallinas
+
+//El problema de los callbacks es que en caso de que se deba de confirmar mucha información, se debe, de hacer varios callbacks lo cual dificulta la 
+//legibilidad y la lectura del código
 obtenerGallina(0,(err, gallina)=>{
     if(err){
         console.log(err);
