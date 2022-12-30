@@ -55,12 +55,15 @@ for (let i = 0; i < dataGallina.length; i++) {
     gallinasArray[i] = new Gallina(dataGallina[i][0], dataGallina[i][1]);
 }
 
+//Otra manera para poder definir los resolve y reject de los Promise es simplificandolos a res y rej
+//Pero al definir la función se deben de nombrar de la misma manera, sino saltará un error
 const obtenerGallina = (id)=>{
     return new Promise((res,rej)=>{
         if(gallinasArray[id] == undefined) rej("No se ha encontrado la Gallina")
         else {res(gallinasArray[id])}
     })
 }
+
 
 const obtenerRaza = (id) =>{
     return new Promise((resolve,reject)=>{
