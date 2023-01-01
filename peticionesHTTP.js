@@ -45,3 +45,9 @@ const json2=`{"variable1" : "Grande",
 const deserializandoJSON = JSON.parse(json2);
 console.log(typeof json2);
 
+
+//-----------SE INICIA CON LA EXPLICACIÓN DE AJAX
+
+//AJAX significa en resumido JavaScript Asincrono
+
+
