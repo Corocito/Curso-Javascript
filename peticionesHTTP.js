@@ -51,3 +51,56 @@ console.log(typeof json2);
 //AJAX significa en resumido JavaScript Asincrono
 
 
+
+//-------------XMLHTTPRequest
+//La manera correcta para poder definir este concepto en programacios es de la sigueinte manera
+
+//De esta manera se crea la peticion, se debe de crear como un objeto
+const peticion = new XMLHttpRequest();
+//Se crea un metodo para poder abrir la información de un archivo json
+//Usando el metodo GET y dandole como segundo parametro la ubicacion del archivo de la informacion se puede tener una variable para
+//la ruta de la información
+peticion.open("GET","Empleados.json");
+
+//-----------------------------------------------------------------------------------------------------------------------
+//De esta manera usando el readystatechange se puede mostrar la información del 
+//archivo que se pida, en este caso el archivo Json
+peticion.addEventListener("readystatechange",()=>{
+    console.log(peticion.readyState);
+    console.log(peticion.response);
+    //Se crea una condicion para que al momento de llegar al momento 4 se muestre la informacion en pantalla
+    //El 200 representa la carga correcta de los recursos, si no está en 200, hay un error  
+    if(peticion.readyState==4 && peticion.status == 200){
+        console.log(JSON.parse(peticion.response));
+    }
+})
+//-------------ESTA ES LA MANERA ANTIGUA DE MOSTRAR LA INFORMACIÓN, AHORA SE HACE DE UNA MANERA DISTINTA
+
+//----------------------------------------------------------------------------------------------------------------------------
+//---------------LA MANERA MAS CORRECTA DE CARGARLOS AHORA ES CON LOAD
+//---------------SIN EMBARGO NO ES LA MANERA MAS EFICIENTE
+
+peticion.addEventListener("load",()=>{
+    let respuesta;
+    if(peticion.status == 200) respuesta = peticion.response
+    else respuesta = "No se ha encontrado el recurso"
+    //De esta manera se va a poder convertir el archivo de estar serializado como string
+    //a JSON para poder trabajarlo
+    console.log(JSON.parse(respuesta));
+})
+
+//-----------------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------------
+//EL AJAX NO ES SOPORTADO EN TODOS LOS NAVEGADORES POR LO QUE SE DEBE DE TRABAJAR CON UN OBJETO DISTINTO 
+//EN CASO DE QUE SEA PARA OTROS NAVEGADORES
+//Se debe de crear un if para verificar el navegador que se esté usando
+if(window.XMLHttpRequest){
+    peticion = new XMLHttpRequest();
+} else{ //En caso de que el navegador no soporte el AJAX se pasa a el otro protocolo
+    peticion = new ActiveXObject("Microsoft.XMLHTTP");
+}
+//-----------------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------------
+
+//Con el SEND se llama la informacion y se envia a la pagina para que la pueda cargar con sus recursoss
+peticion.send();
