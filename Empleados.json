@@ -1,0 +1,53 @@
+[
+    {
+        "idEmpleado": 109,
+        "nombreEmpleado": "Lucas Vasquez",
+        "documentoEmpleado": 1820392763,
+        "direccionEmpleado": "Calle Pequeña",
+        "telefonoEmpleado": 7281902,
+        "emailEmplaedo": "Lv@gmail.com",
+        "fechaIngreso": "10/18/2022"
+    },
+
+    {
+        "idEmpleado": 208,
+        "nombreEmpleado": "John Ortiz",
+        "documentoEmpleado": 6283091276,
+        "direccionEmpleado": "Calle Grande",
+        "telefonoEmpleado": 8267123,
+        "emailEmplaedo": "JO@gmail.com",
+        "fechaIngreso": "10/18/2022"
+    },
+
+    {
+        "idEmpleado": 307,
+        "nombreEmpleado": "Pepe Ordoñez",
+        "documentoEmpleado": 7156290725,
+        "direccionEmpleado": "Calle Mediana",
+        "telefonoEmpleado": 2906712,
+        "emailEmplaedo": "PPo@gmail.com",
+        "fechaIngreso": "10/18/2022"
+    },
+
+    {
+        "idEmpleado": 406,
+        "nombreEmpleado": "Rick Rodgers",
+        "documentoEmpleado": 6709287165,
+        "direccionEmpleado": "Calle Grande",
+        "telefonoEmpleado": 8926512,
+        "emailEmplaedo": "RR@gmail.com",
+        "fechaIngreso": "10/18/2022"
+    },
+
+    {
+        "idEmpleado": 505,
+        "nombreEmpleado": "Dave Stewart",
+        "documentoEmpleado": 2903478123,
+        "direccionEmpleado": "Calle Pequeña",
+        "telefonoEmpleado": 1092873,
+        "emailEmplaedo": "DS@gmail.com",
+        "fechaIngreso": "10/18/2022"
+    }
+]
+
+
