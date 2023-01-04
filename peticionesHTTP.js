@@ -130,13 +130,18 @@ peticion2.addEventListener("load",()=>{
 })
 
 //Se agrega el metodo post con la dirección html que estemos trabajando
+//regres.in es una oagina educativa que muestra los distintos tipos de envio de datos que existen
+//se usa su direccion html para que maneje todas las peticiones POST
 peticion2.open("POST","https://reqres.in/api/users");
 
 //Se debe de agregar esta linea de codigo para que se pueda manejar la informacion de una manera correcta
 peticion2.setRequestHeader("Content-type","application/json;charset=UTF8")
 
-
+//Se devuelven los datos que se envian
+//Estos datos son los que se van a mostrar en pantalla
 peticion2.send(JSON.stringify({
-    "nombre": "morfeo",
-    "trabajo": "lider"
+    "nombre": "Blanca",
+    "raza": "Criolla"
 }));
+
+
