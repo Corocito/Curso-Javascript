@@ -104,3 +104,39 @@ if(window.XMLHttpRequest){
 
 //Con el SEND se llama la informacion y se envia a la pagina para que la pueda cargar con sus recursoss
 peticion.send();
+
+
+//---------------------COMIENZA EXPLICACIÓN DE LAS DIFERENCIAS ENTRE GET Y POST
+
+/*--Con el metodo GET los datos de las URL son visibles pero no con el metodo POST
+--Con el metodo GET los datos pueden permanecer en el historial del navegador
+--Para enviar datos sensibles como contraseñas es preferible utilizar el POST, ya que este no guarda la informacion de ninguna manera, solo la envia
+--El metodo POST no tiene ninguna restriccion con los tipos de datos que maneja
+--Ambos metodos son suceptibles a intentos de hackeos pero es mas dificil con el metodo POST
+*/
+
+//PARA PODER ENVIAR UNA PETICION CON POST SE DEBE DE HACER LO SIGUENTE
+
+
+//Se crea la peticion XML para trabajarla
+let peticion2 = new XMLHttpRequest();
+
+//Se le agrega el eventlistener para manejar los cambios que le ocurran a la peticion
+peticion2.addEventListener("load",()=>{
+    let respuesta;
+    if(peticion2.status==200 || peticion2.status==201) respuesta= peticion2.response
+    else respuesta = "No se ha encontrado el archivo";
+    console.log(JSON.parse(respuesta))
+})
+
+//Se agrega el metodo post con la dirección html que estemos trabajando
+peticion2.open("POST","https://reqres.in/api/users");
+
+//Se debe de agregar esta linea de codigo para que se pueda manejar la informacion de una manera correcta
+peticion2.setRequestHeader("Content-type","application/json;charset=UTF8")
+
+
+peticion2.send(JSON.stringify({
+    "nombre": "morfeo",
+    "trabajo": "lider"
+}));
