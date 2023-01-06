@@ -23,19 +23,21 @@ const materias = [
     }
 ];
 
-let materia=[];
+
 //Se define el promise con el cual se va a trabajar
 const obtenerMateria = (id)=>{
-    return new Promise((res,rej)=>{
+    
+    return new Promise((resolve,reject)=>{
         materia = materias[id];
-        if(materia == undefined) rej("La materia no existe");
-        else setTimeout(()=>{res(materia)},Math.random()*400);
+        if(materia == undefined) reject("La materia no existe");
+        else setTimeout(()=>{resolve(materia)},Math.random()*400);
+        //else {resolve(materia)}
     })
 }
 
 
 const devolverMaterias = async()=>{
-    
+    let materia=[];
     for (let i = 0; i < materias.length; i++) {
         materia[i] = await obtenerMateria[i];
         let newHTMLCode = `<div class="materia">
