@@ -85,3 +85,49 @@ let array =[];
 array.__proto__ = gallina1;
 
 
+//-----------------EXPLICACIÓN MODO ESTRICTO-------------------------
+
+//El modo estricto convierte todos los errores de JavaScript en excepciones
+
+//Mejora la optimización de los errores y consigue mejores tiempos de ejecución
+
+//Evita sintaxis usadas en posteriores a ES6 (EmaScript6)
+
+//No permite que el programador realice una "mala sintaxis"
+
+//Para poder acceder al metodo estricto de manera global se debe de usar la variable "use strict";
+
+//Con el uso de esta variable accedemos al metodo estricto
+//"use strict";
+
+//TODOS LOS POSIBLES ERRORES LOS CONVIERTE EN EXCEPCIONES QUE PARAN LA EJECUCIÓN DEL PROGRAMA
+
+//Se define un objeto 
+const objt = {};
+
+//Esta es otra manera de definir las propiedades de un objeto
+Object.defineProperty(objt, 'nombre', {value: "Alas", writable: false});
+
+//Se intentaria cambiar el valor de la propiedad nombre del objeto
+objt.nombre="Blanca";
+
+/*En caso de que se esté usando el modo estricto saltaría un a excepción que detendria la ejecución
+del programa debido que se en la propiedad del objeto se definió que no se puede cambiar
+, sin usar el modo estricto solamente se mostraría la variable sin ningun cambio  */
+console.log(obj.nombre);
+
+//Esta linea evita que se agreguen mas propiedades a un objeto creado
+Object.preventExtensions(objt);
+
+//SEGÚN EL METODO STRICT NO SE PUEDEN DEFINIR DOS VARIABLES CON EL MISMO NOMBRE A UNA FUNCIÓN
+
+//EL DELETE EN OBJETOS O VARIABLES NO ES POSIBLE EN EL MODO STRICT
+//El delete se usa para borrar propiedades de los objetos
+
+//LAS PALABRAS RESERVADAS NO PUEDEN SER USADAS COMO VARIABLES
+
+//PARA PODER TRABAJAR CON LOS NUMEROS OCTALES SE DEBE DE PONER UNA O AL INICIO DEL NUMERO
+
+//PARA QUE EL MODO STRICT FUNCIONE SE DEBE DE PONER LA LINEA DE CODIGO AL INICIO DEL PROGRAMA O AL INICO DE UNA FUNCION
+//DE LO CONTRARIO NO VA A FUNCIONAR
+
