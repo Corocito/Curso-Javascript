@@ -163,7 +163,9 @@ const sumar3 = (a=0,b=0)=>{
 //El parametro rest son los tres puntos antes del num, lo cual convierte a cualquier valor
 //en un array, por lo que se pueden sumar los valores del array sin importar cuantos
 //valores se den
-const sumaRest = (...num)=>{
+
+//En caso de que se deseen agregar otros valores se deben de hacer antes del rest
+const sumaRest = (frase, ...num)=>{
     //Se define la variable con la cual se va a trabajar para almacenar el resultado
     let resultado = 0;
 
@@ -173,11 +175,56 @@ const sumaRest = (...num)=>{
     }
     //Se muestra el resultado en pantalla
     console.log(resultado);
+    console.log(`${frase} ${resultado}`)
 }
 //Se le dan los valores con los que trabajar al metodo
 sumaRest(12,25,66)
 
 
+//-----------------EXPLICACIÓN DEL OPERADOR TERNARIO O CONDICIONAL
+
+//Se pone como ejemplo una funcion para validar una edad
+
+let edad = 20;
+
+//Esta es otra manera de validar sin usar el if o el else
+
+//Usando el ? se pasa a decir lo que se hace en caso de que sea true
+//En caso de que se desee ejecutar mas de una linea de codigo se debe de encerrar en parentesis
+(edad>18) ? (console.log("Es mayor de edad"),
+            console.log("Puede pasar"))
+          : console.log("Es menor de edad");
+          //Usando los : se dice lo que se hace si es false
+
+//El operador ternario consume menos recursos de los que se consume con un if o else
 
 
+//------------EXPLICACION DEL OPERADOR SPREAD-------
 
+
+//El operador rest (...) funciona ademas para poder desestructurar los array
+
+let arr = ["valor1", "valor2", "valor3"];
+
+//Usando el rest lo que se hace es mostrar el array como un texto cada uno de los valores
+//Muestra los valores como un string y no como un array
+console.log(arr)
+console.log(...arr);
+
+
+//Otro uso del parametro rest (...) es usandolo para poder unir dos arrays
+
+let array1 = ["valor1", "valor2", "valor3"];
+let array2 = ["valor4", "valor5", "valor6"];
+
+//Usando el rest como parametro junto con el array que se desea juntar lo estariamos agregando cada uno 
+//Como un string por lo que se agregan todos los valores
+array1.push(...array2);
+
+console.log(array1);
+
+//En caso de que se desee concatenar la informacion de dos array en uno nuevo se hace lo siguiente
+
+//Se crea un nuevo array y se pasa la informacion de los dos array restantes con los parametros rest
+let array3= [...array1,...arra21];
+console.log(array3);
