@@ -122,3 +122,62 @@ document.querySelector(".t12").addEventListener("click",px12);
 document.querySelector(".t14").addEventListener("click",px14);
 document.querySelector(".t16").addEventListener("click",px16);
 
+
+//SE PRESENTA OTRO EJEMPLO DE LAS CLAUSURAS EXPLICANDO LOS PARAMETROS POR DEFECTO
+
+const sumar = (a,b)=>{
+    console.log(a+b);
+}
+
+//En este caso saltaria en pantalla un parametro Nan ya que no se pasó el segundo valor para sumar
+//Para poder manejar este error se puede hacer de las siguientes maneras
+sumar(10)
+
+//Se pone de ejemplo un metodo que va a sumar dos valores y en caso de que no
+//se pasen los valores pedidos se puede solucionar el error de las siguientes maneras
+
+
+//Esta es la primera manera, sin embargo no es la mas recomendada
+const sumar1= (a,b)=>{
+    b = typeof b !== 'undefined'? b:0; 
+    console.log(a+b);
+}
+
+
+//Esta es la segunda manera de manejar el Nan
+const sumar2 = (a,b)=>{
+    b=b||0; //En este caso se asignaria el valor de b como b o 0 en caso de que no haya otro valor
+    console.log(a+b);
+}
+
+
+//La tercera manera es dandole valores por defecto a las variables
+const sumar3 = (a=0,b=0)=>{
+    console.log(a+b);//Así en caso de que no se de un valor a b tomará en valor por defecto
+}
+
+
+//----------------EXPLICACION DEL PARAMETRO REST-------------------
+//Este parametro funciona como un argumento 
+
+//El parametro rest son los tres puntos antes del num, lo cual convierte a cualquier valor
+//en un array, por lo que se pueden sumar los valores del array sin importar cuantos
+//valores se den
+const sumaRest = (...num)=>{
+    //Se define la variable con la cual se va a trabajar para almacenar el resultado
+    let resultado = 0;
+
+    //Se crea el ciclo for para poder realizar la suma entre los valores del array
+    for (let i = 0; i < num.length; i++) {
+        resultado = num[i];
+    }
+    //Se muestra el resultado en pantalla
+    console.log(resultado);
+}
+//Se le dan los valores con los que trabajar al metodo
+sumaRest(12,25,66)
+
+
+
+
+
