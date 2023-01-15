@@ -226,5 +226,5 @@ console.log(array1);
 //En caso de que se desee concatenar la informacion de dos array en uno nuevo se hace lo siguiente
 
 //Se crea un nuevo array y se pasa la informacion de los dos array restantes con los parametros rest
-let array3= [...array1,...arra21];
+let array3= [...array1,...array2];
 console.log(array3);
