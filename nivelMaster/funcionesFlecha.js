@@ -228,3 +228,8 @@ console.log(array1);
 //Se crea un nuevo array y se pasa la informacion de los dos array restantes con los parametros rest
 let array3= [...array1,...array2];
 console.log(array3);
+
+//El parametro REST se encarga de descomponer los parametros de los array para poder trabajar 
+//con cada uno de los valores de manera individual por lo que se pueden hace sumas continuas con los valores
+//de los array o tambien se pueden hacer funciones que junten los array en uno solo ya que al descomponer los valores
+//de los array se puede trabajar agregando cada uno de manera individual
