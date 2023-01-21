@@ -9,6 +9,7 @@ body{
     padding: 100px 200px;
     background: #ccc;
     margin: 50px;
+    outline: 6px dashed #aaa;
 }
 
 .circulo{
