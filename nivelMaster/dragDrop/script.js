@@ -64,8 +64,6 @@ rectangulo.addEventListener("dragleave",()=>console.log(4));
 
 
 //------------SE EMPIEZA CON UN EJERCICIO PARA APLICAR EL DRAG Y EL DROP
-
-
 const zona = document.querySelector(".zona");
 
 zona.addEventListener("dragover",(e)=>{
@@ -76,7 +74,6 @@ zona.addEventListener("drop",(e)=>{
     let n = e.dataTransfer.getData("textura");
     zona.style.background = `url("textura${n}.jpg")`
 })
-
 
 const cambiarTextura = (n,e) =>{
     e.dataTransfer.setData("textura",n);
