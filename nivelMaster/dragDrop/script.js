@@ -77,12 +77,13 @@ zona.addEventListener("drop",(e)=>{
     zona.style.background = `url("textura${n}.jpg")`
 })
 
+
+const cambiarTextura = (n,e) =>{
+    e.dataTransfer.setData("textura",n);
+}
+
 //Se realiza con un ciclo for para poder detectar la cantidad de texturas que hay
 //usando el metodo children
 for (let i = 1; i < document.querySelector(".texturas").children.length +1; i++) {
     document.querySelector(`.textura${i}`).addEventListener("dragstart",(e)=>cambiarTextura(i,e));
-}
-
-const cambiarTextura = (n,e) =>{
-    e.dataTransfer.setData("textura",n);
 }
