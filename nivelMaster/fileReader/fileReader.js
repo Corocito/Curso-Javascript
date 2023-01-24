@@ -38,7 +38,7 @@ const leerVariosArchivos = ar =>{
 //para pedirle al usuario el documento que se desea leer, mientras que el fetch
 //se usa para trabajar con documentos los cuales ya conocemos su origen y nombre
 
-//Para poder recibir la informacion de los archivos los cuales se desea leer
+//Para poder recibir la informacion de los archivos los cuagitles se desea leer
 //se debe de  pedir al ususario que la suministre, esto se hace mediante el archivo HTML
 //el cual con un input va a recibir la información y el JavaScript la ejecutará
 
